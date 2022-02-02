@@ -4,6 +4,7 @@ services:
   service-balance:
     restart: unless-stopped
     image: nginx:1.12.0
+    platform: 'linux/x86_64'
     volumes:
       - ./service-balance/default.conf:/etc/nginx/conf.d/default.conf
     ports:
@@ -16,6 +17,7 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./web-ui
+    platform: 'linux/x86_64'
     networks:
       - web-ui-network
 
@@ -23,6 +25,7 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./worker-management
+    platform: 'linux/x86_64'
     volumes:
       - ./worker-management:/code
     networks:
