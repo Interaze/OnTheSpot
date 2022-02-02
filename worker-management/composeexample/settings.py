@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'Final_Project',
         'USER': 'root',
         'PASSWORD': 'testcase',
-        'HOST': 'OnTheSpot_management-store_1',
+        'HOST': 'onthespot-management-store-1',
         'PORT': '3306',
     }
 }
