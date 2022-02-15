@@ -20,6 +20,8 @@ services:
     platform: 'linux/x86_64'
     networks:
       - web-ui-network
+    volumes:
+      - ./web-ui/src:/app/src
 
   worker-management:
     build:
@@ -37,6 +39,8 @@ volumes:
   service-balance:
     driver: local
   worker-management:
+    driver: local
+  web-ui:
     driver: local
 
 networks:
