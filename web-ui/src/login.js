@@ -1,9 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function Login() {
   return (
-    
     <div id="draggable">
         <h3>Log in</h3>
         <form action="loginFunc.php" method="POST">
@@ -16,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
