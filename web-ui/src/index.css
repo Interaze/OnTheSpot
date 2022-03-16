@@ -66,7 +66,7 @@ form .form-inner .form-group{
   transition: 0.4s;
 }
 
-.form-inner .form-group.focuse :focus-within label{
+.form-inner .form-group.focuse:focus-within label{
   color: #FE4880; 
 }
 
@@ -87,7 +87,7 @@ form .form-inner input[type="submit"]{
   display: inline-block;
   padding: 10px 15px;
   border-radius: 9px;
-  background-image: linear-gradient(to right #FFCE00 50% #FFCE00 50% #FF4880);
+  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
   background-size: 200%;
   background-position: 0%;
   transition: 0.4s;
