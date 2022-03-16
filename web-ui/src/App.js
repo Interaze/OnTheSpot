@@ -7,7 +7,7 @@ function App(){
     password: "admin123"
   }
 
-  const [user, setUser] = useState({name: "", email: ""});
+  const [user, setUser] = useState({email: ""});
   const [error, setError] = useState("");
 
   const Login = details => {
@@ -16,7 +16,6 @@ function App(){
     if(details.email == adminUser.email && details.password == adminUser.password){
       console.log("Logged in");
       setUser({
-        name: details.name,
         email: details.email
       });
     }else{
@@ -27,7 +26,6 @@ function App(){
 
   const Logout = () =>{
     setUser({
-      name: "",
       email: ""
     });
   }
@@ -36,7 +34,7 @@ function App(){
     <div className = "App">
       {(user.email != "") ? (
         <div className = "welcome">
-          <h2>Welcome, <span>{user.name}</span></h2>
+          <h2>Welcome</h2>
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
