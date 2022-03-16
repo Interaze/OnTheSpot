@@ -1,34 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import LoginForm from './LoginForm';
 
-function App() {
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Chris <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div id="draggable">
-        <h3>Log in</h3>
-        <form action="loginFunc.php" method="POST">
-            <input type="text" placeholder="Username" class="textInput" name="User"></input>
-            <input type="password" placeholder="Password" class="textInput" name="Password"></input>
-            <br></br>
-            <input type="submit" value="Submit" id="submitBttn"></input>
-        </form>
+function App(){
+  const adminUser = {
+    email: "admin@admin.com",
+    password: "admin123"
+  }
+
+  const [user, setUser] = useState({name: "", email: ""});
+  const [error, setError] = useState("");
+
+  const Login = details => {
+    console.log(details);
+
+    if(details.email == adminUser.email && details.password == adminUser.password){
+      console.log("Logged in");
+      setUser({
+        name: details.name,
+        email: details.email
+      });
+    }else{
+      console.log("Details do not match");
+      setError("Details do not match!");
+    }
+  }
+
+  const Logout = () =>{
+    setUser({
+      name: "",
+      email: ""
+    });
+  }
+
+  return(
+    <div className = "App">
+      {(user.email != "") ? (
+        <div className = "welcome">
+          <h2>Welcome, <span>{user.name}</span></h2>
+          <button onClick={Logout}>Logout</button>
+        </div>
+      ) : (
+        <LoginForm Login={Login} error={error}/>
+      )}
     </div>
   );
 }
+
 
 export default App;
