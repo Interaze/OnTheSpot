@@ -124,3 +124,11 @@ class SpotAPI():
             return True
         except:
             return False
+
+    # Create a new mission for Spot to execute
+    def createMission(self, missionName):
+        pass
+
+    # Execute a mission
+    def executeMission(self, missionName):
+        pass
