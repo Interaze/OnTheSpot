@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import LoginForm from './LoginForm';
+import authHeader from './services/auth-header';
+import authService from './services/auth.service';
+import userService from './services/user.service';
 
 function App(){
   const adminUser = {
