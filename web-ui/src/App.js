@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import LoginForm from './LoginForm';
-import authHeader from './services/auth-header';
-import authService from './services/auth.service';
-import userService from './services/user.service';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App(){
   const adminUser = {
