@@ -33,9 +33,12 @@ function App(){
   return(
     <div className = "App">
       {(user.email !== "") ? (
-        <div className = "welcome">
-          <h2>Welcome</h2>
-          <button onClick={Logout}>Logout</button>
+        <div className = "verticle-menu">
+          <a href="#" className='active'>Task 1</a>
+          <a href="#">Task 2</a>
+          <a href="#">Task 3</a>
+          <a href="#">Task 4</a>
+          <a href="#">Task 5</a>
         </div>
       ) : (
         <LoginForm Login={Login} error={error}/>
