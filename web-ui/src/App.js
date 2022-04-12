@@ -31,7 +31,7 @@ function App(){
   }
 
   return(
-    <div className = "App">
+    <div>
       {(user.email !== "") ? (
         <div className = "verticle-menu">
           <a href="#" className='active'>Task 1</a>
@@ -41,7 +41,9 @@ function App(){
           <a href="#">Task 5</a>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error}/>
+        <div className='App'>
+          <LoginForm Login={Login} error={error}/>
+        </div>
       )}
     </div>
   );
