@@ -33,12 +33,15 @@ function App(){
   return(
     <div>
       {(user.email !== "") ? (
-        <div className = "verticle-menu">
-          <a href="#" className='active'>Task 1</a>
-          <a href="#">Task 2</a>
-          <a href="#">Task 3</a>
-          <a href="#">Task 4</a>
-          <a href="#">Task 5</a>
+        <div>
+          <div className = "verticle-menu">
+            <a href="#" className='active'>Task 1</a>
+            <a href="#">Task 2</a>
+            <a href="#">Task 3</a>
+            <a href="#">Task 4</a>
+            <a href="#">Task 5</a>
+          </div>
+          <button>Logout</button>
         </div>
       ) : (
         <div className='App'>
