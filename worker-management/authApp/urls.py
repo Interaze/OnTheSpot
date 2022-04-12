@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from authApp import views
+from auth.views import CheckAuth
 
 urlpatterns = [
-    path('set-csrf-cookie/', views.set_csrf_token, name='set_csrf_token'),
-    path('login/', views.login_view, name='login_view')
+    path('set-csrf/', views.set_csrf_token, name='Set-CSRF'),
+    path('login/', views.login_view, name='Login'),
+    path('test-auth/', CheckAuth.as_view(), name='Test-Auth')
 ]

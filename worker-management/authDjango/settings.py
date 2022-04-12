@@ -24,10 +24,8 @@ SECRET_KEY = 'django-insecure-7c%xq$5z@7m+vy(jc85$xcb^&vqu12h#+aipu3@e^v8089_jdy
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
+CSRF_USE_SESSIONS = True
+CSRF_TRUSTED_ORIGINS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -73,10 +71,11 @@ WSGI_APPLICATION = 'authDjango.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication'
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated'
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 

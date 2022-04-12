@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 # Create your views here.
 """
 SOURCE - https://yoongkang.com/blog/cookie-based-authentication-spa-django/
