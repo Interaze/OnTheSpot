@@ -100,11 +100,15 @@ form .form-inner input[type="submit"]:hover{
   background-position: 100% 0%;
 }
 
+.landing-page{
+  background-color: #53565A;
+  height: 100vh;
+}
+
 .verticle-menu{
   width: 200px;
   height: 100%;
   overflow-y: auto;
-  background-color: #53565A;
 }
 
 .verticle-menu a{
@@ -122,4 +126,57 @@ form .form-inner input[type="submit"]:hover{
 .verticle-menu a.active{
   background-color: #4CAF50;
   color: white;
+}
+
+.logout-button{
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-button:hover{
+  background-position: 100% 0%;
+}
+
+.settings-button{
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analytics-button{
+  position: absolute;
+  right: 150px;
+  top: 10px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-button:hover, .analytics-button:hover{
+  background-position: 100% 0%;
 }
