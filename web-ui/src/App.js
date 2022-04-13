@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import LoginForm from './LoginForm';
 import Analytics from './Analytics';
 import Settings from './Settings';
+import {FcSettings} from './react-icons/fc';
 
 function App(){
   const adminUser = {
@@ -44,7 +45,7 @@ function App(){
             <a href="#">Task 5</a>
           </div>
           <button onClick={Logout} className="logout-button">Logout</button>
-          <button onClick={<Settings/>} className="settings-button">Settings</button>
+          <button onClick={<Settings/>} className="settings-button"><FcSettings/></button>
           <button onClick={<Analytics/>} className="analytics-button">Analytics</button>
         </div>
       ) : (
