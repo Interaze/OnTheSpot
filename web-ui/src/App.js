@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import LoginForm from './LoginForm';
-import Analytics from './Analytics';
-import Settings from './Settings';
+// import Analytics from './Analytics';
+// import Settings from './Settings';
 import {IoMdSettings} from '../node_modules/react-icons/io';
 import {SiSimpleanalytics} from '../node_modules/react-icons/si';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+
 
 function App(){
   const adminUser = {
@@ -46,8 +48,12 @@ function App(){
             <a href="#">Task 5</a>
           </div>
           <button onClick={Logout} className="logout-button">Logout</button>
-          <button onClick={<Settings/>} className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></button>
-          <button onClick={<Analytics/>} className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></button>
+          {/* <Link to='/settings'> */}
+            <button className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></button>
+          {/* </Link> */}
+          {/* <Link to='/analytics'> */}
+            <button className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></button>
+          {/* </Link> */}
         </div>
       ) : (
         <div className='App'>
