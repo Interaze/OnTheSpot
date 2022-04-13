@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import LoginForm from './LoginForm';
+import Analytics from './Analytics';
+import Settings from './Settings';
 
 function App(){
   const adminUser = {
@@ -42,8 +44,8 @@ function App(){
             <a href="#">Task 5</a>
           </div>
           <button onClick={Logout} className="logout-button">Logout</button>
-          <button className="settings-button">Settings</button>
-          <button className="analytics-button">Analytics</button>
+          <button onClick={<Settings/>} className="settings-button">Settings</button>
+          <button onClick={<Analytics/>} className="analytics-button">Analytics</button>
         </div>
       ) : (
         <div className='App'>
