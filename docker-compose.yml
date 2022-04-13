@@ -20,6 +20,8 @@ services:
     platform: 'linux/x86_64'
     networks:
       - web-ui-network
+    environment:
+      - WDS_SOCKET_PORT=4050
     volumes:
       - ./web-ui/src:/app/src
 

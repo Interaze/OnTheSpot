@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from authApp import views
+from authApp.views import set_csrf_token, login_view
 from auth.views import CheckAuth
 
 urlpatterns = [
-    path('set-csrf/', views.set_csrf_token, name='Set-CSRF'),
-    path('login/', views.login_view, name='Login'),
+    path('set-csrf/', set_csrf_token, name='Set-CSRF'),
+    path('login/', login_view, name='Login'),
     path('test-auth/', CheckAuth.as_view(), name='Test-Auth')
+
+#    path('example-view/', views.ExampleView.get, name='Example-View')
 ]

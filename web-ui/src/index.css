@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
 }
-
+/*
 input, button{
   appearance: none;
   background: none;
@@ -119,4 +119,4 @@ form .form-inner input[type="submit"]:hover,
 .welcome h2 span{
   color: #FE4880;
   font-weight: 700;
-}
+}*/

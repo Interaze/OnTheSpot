@@ -1,12 +1,11 @@
-# Create your views here.
-"""
-SOURCE - https://yoongkang.com/blog/cookie-based-authentication-spa-django/
-"""
 import json
 from django.contrib.auth import authenticate, login
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.http import JsonResponse
+from rest_framework.views import APIView
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.response import Response
 
 @ensure_csrf_cookie
 def set_csrf_token(request):
@@ -14,6 +13,7 @@ def set_csrf_token(request):
     This will be `/api/set-csrf-cookie/` on `urls.py`
     """
     return JsonResponse({"details": "CSRF cookie set"})
+
 
 @require_POST
 def login_view(request):
