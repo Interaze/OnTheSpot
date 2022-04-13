@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import LoginForm from './LoginForm';
 import Analytics from './Analytics';
 import Settings from './Settings';
-import {FcSettings} from './react-icons/fc';
+import {IoMdSettings} from '../node_modules/react-icons/io';
+import {SiSimpleanalytics} from '../node_modules/react-icons/si';
 
 function App(){
   const adminUser = {
@@ -45,8 +46,8 @@ function App(){
             <a href="#">Task 5</a>
           </div>
           <button onClick={Logout} className="logout-button">Logout</button>
-          <button onClick={<Settings/>} className="settings-button"><FcSettings/></button>
-          <button onClick={<Analytics/>} className="analytics-button">Analytics</button>
+          <button onClick={<Settings/>} className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></button>
+          <button onClick={<Analytics/>} className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></button>
         </div>
       ) : (
         <div className='App'>
