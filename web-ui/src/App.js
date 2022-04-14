@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import LoginForm from './LoginForm';
-import Analytics from './Analytics';
-import Settings from './Settings';
 import {IoMdSettings} from '../node_modules/react-icons/io';
 import {SiSimpleanalytics} from '../node_modules/react-icons/si';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function App() {
