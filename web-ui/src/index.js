@@ -7,10 +7,11 @@ import reportWebVitals from "./reportWebVitals";
 import Analytics from './Analytics';
 import Settings from './Settings';
 import "./index.css";
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}/>
+      <Route path="/" element={<App/>}/>
       <Route path="analytics" element={<Analytics/>}/>
       <Route path="settings" element={<Settings/>}/>
     </Routes>
