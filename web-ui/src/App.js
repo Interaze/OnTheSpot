@@ -62,7 +62,7 @@ render() {
             <h2>Login</h2>
             <div className='form-group'>
               <label htmlFor='username'>Username</label>
-              <input name='username' id='email' value={this.state.username} onChange={this.handleChange}></input>
+              <input name='username' id='username' value={this.state.username} onChange={this.handleChange}></input>
             </div>
             <div className='form-group'>
               <label htmlFor='password'>Password</label>
