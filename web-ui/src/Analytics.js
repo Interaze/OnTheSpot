@@ -6,13 +6,13 @@ function Analytics() {
   return (
     <div className="landing-page">
       <div className="verticle-menu">
-        <a href="#" className="active">
+        <a href="/#" className="active">
           Task 1
         </a>
-        <a href="#">Task 2</a>
-        <a href="#">Task 3</a>
-        <a href="#">Task 4</a>
-        <a href="#">Task 5</a>
+        <a href="/#">Task 2</a>
+        <a href="/#">Task 3</a>
+        <a href="/#">Task 4</a>
+        <a href="/#">Task 5</a>
       </div>
       <Link to="/" className="settings-button"><BiArrowBack color='white' fontSize='1.5rem'/></Link>
     </div>

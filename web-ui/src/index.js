@@ -7,15 +7,17 @@ import reportWebVitals from "./reportWebVitals";
 import LoginForm from './LoginForm'
 import Analytics from './Analytics';
 import Settings from './Settings';
-import "./index.css";
+import Vtk from './Vtk';
+
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<LoginForm/>}/>
-      <Route path="home" element={<App/>}/>
+      <Route path="login" element={<LoginForm/>}/>
+      <Route path="/" element={<App/>}/>
       <Route path="analytics" element={<Analytics/>}/>
       <Route path="settings" element={<Settings/>}/>
+      <Route path="vtk" element={<Vtk/>}/>
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
