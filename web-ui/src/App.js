@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { Component }  from 'react';
 // import LoginForm from './LoginForm';
 // import {IoMdSettings} from '../node_modules/react-icons/io';
 // import {SiSimpleanalytics} from '../node_modules/react-icons/si';
@@ -36,10 +36,7 @@ testEndpoint = () => {
   .catch(res => this.setState({endpoint: false})) 
 }
 render() {
-  return <div>
-      <div style={{height: '50px'}}></div>
-      <button onClick={this.setCSRF}>Set CSRF Token</button>
-      <div style={{height: '50px'}}></div>
+  return <div className='App' onLoad={this.setCSRF}>
       <form onSubmit={this.handleSubmit}>
         <div className='form-inner'>
           <h2>Login</h2>
@@ -54,12 +51,12 @@ render() {
           <input type='submit' value='Login'></input>
         </div>
        </form>
-       <div style={{height: '50px'}}></div>
       <div>
         {this.state.auth === null ? '' : (this.state.auth ? 'Login successful' : 'Login Failed' )}
       </div>
-      <div style={{height: '50px'}}></div>
-      <button onClick={this.testEndpoint}>Test Endpoint</button>
+      <div className='other-button'>
+        <button onClick={this.testEndpoint}>Test Endpoint</button>
+      </div>
       <div>{this.state.endpoint === null ? '' : (this.state.endpoint ? 'Successful Request' : 'Request Rejected')}</div>
     </div>
 };
