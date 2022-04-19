@@ -1,8 +1,6 @@
 FROM node:alpine
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm install axios
-RUN npm install react-icons --save
-RUN npm install react-router-dom@6
+RUN npm install
 COPY . .
 CMD ["npm","run","start"]
