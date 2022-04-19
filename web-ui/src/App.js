@@ -1,8 +1,8 @@
 import React, { Component }  from 'react';
 // import LoginForm from './LoginForm';
-// import {IoMdSettings} from '../node_modules/react-icons/io';
-// import {SiSimpleanalytics} from '../node_modules/react-icons/si';
-// import {Link} from 'react-router-dom';
+import {IoMdSettings} from '../node_modules/react-icons/io';
+import {SiSimpleanalytics} from '../node_modules/react-icons/si';
+import {Link} from 'react-router-dom';
 
 import axios from './axiosConfig';
 export default class App extends Component {
@@ -17,6 +17,9 @@ export default class App extends Component {
 }
 setCSRF = () => {
   axios.get('api/set-csrf/').then(res => console.log(res))
+  axios.get('/api/test-auth/').then(res => this.setState(
+    {endpoint:      true}))
+    .catch(res => this.setState({endpoint: false})) 
 }
 handleChange = (e) => {
   this.setState({[e.target.name]: e.target.value})
@@ -36,32 +39,84 @@ testEndpoint = () => {
   .catch(res => this.setState({endpoint: false})) 
 }
 render() {
-  return <div className='App'>
-      <form onSubmit={this.handleSubmit}>
-        <div className='form-inner'>
-          <h2>Login</h2>
-          <div className='form-group'>
-            <label htmlFor='username'>Username</label>
-            <input name='username' id='email' value={this.state.username} onChange={this.handleChange}></input>
+  return( 
+    <div>
+      {this.state.endpoint === true ? (
+        <div className="landing-page">
+          <div className="verticle-menu">
+              <a href="#" className="active">
+                Task 1
+              </a>
+              <a href="#">Task 2</a>
+              <a href="#">Task 3</a>
+              <a href="#">Task 4</a>
+              <a href="#">Task 5</a>
+            </div>
+            {/* <button onClick={Logout} className="logout-button">
+              Logout
+            </button> */}
+            <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
+            <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
           </div>
-          <div className='form-group'>
-            <label htmlFor='password'>Password</label>
-            <input type='password'name='password' id='password' value={this.state.password} onChange={this.handleChange}></input>
+      ):(
+        <div className='App'>
+        <form onSubmit={this.handleSubmit}>
+          <div className='form-inner'>
+            <h2>Login</h2>
+            <div className='form-group'>
+              <label htmlFor='username'>Username</label>
+              <input name='username' id='email' value={this.state.username} onChange={this.handleChange}></input>
+            </div>
+            <div className='form-group'>
+              <label htmlFor='password'>Password</label>
+              <input type='password'name='password' id='password' value={this.state.password} onChange={this.handleChange}></input>
+            </div>
+            <input type='submit' value='Login' onClick={this.setCSRF}></input>
           </div>
-          <input type='submit' value='Login' onClick={this.setCSRF}></input>
+        </form>
+        <div>
+          {this.state.auth === null ? '' : (this.state.auth ? 'Login successful' : 'Login Failed' )}
         </div>
-       </form>
-      <div>
-        {this.state.auth === null ? '' : (this.state.auth ? 'Login successful' : 'Login Failed' )}
+        <div className='other-button'>
+          <button onClick={this.testEndpoint}>Continue</button>
+        </div>
+        <div>{this.state.endpoint === null ? '' : (this.state.endpoint ? 'Successful Request' : 'Request Rejected')}</div>
       </div>
-      <div className='other-button'>
-        <button onClick={this.testEndpoint}>Test Endpoint</button>
-      </div>
-      <div>{this.state.endpoint === null ? '' : (this.state.endpoint ? 'Successful Request' : 'Request Rejected')}</div>
+      )}
+      
     </div>
+  )
 };
 }
 
+
+//   return (
+//       <div>
+//         {user.email !== '' ? (
+//           <div className="landing-page">
+//             <div className="verticle-menu">
+//               <a href="#" className="active">
+//                 Task 1
+//               </a>
+//               <a href="#">Task 2</a>
+//               <a href="#">Task 3</a>
+//               <a href="#">Task 4</a>
+//               <a href="#">Task 5</a>
+//             </div>
+//             <button onClick={Logout} className="logout-button">
+//               Logout
+//             </button>
+//             <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
+//             <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
+//           </div>
+//         ) : (
+//           <div className="App">
+//             <LoginForm Login={Login} error={error} />
+//           </div>
+//         )}
+//       </div>
+//   );
+// }
 
 // import React, { Component } from 'react';
 // import './App.css';
