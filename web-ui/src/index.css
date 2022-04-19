@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
 }
-
+/*
 input, button{
   appearance: none;
   background: none;
@@ -15,7 +15,6 @@ input, button{
 .App{
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #53565A;
@@ -84,7 +83,8 @@ form .form-inner .form-group input:focus{
   box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
 }
 
-form .form-inner input[type="submit"]{
+form .form-inner input[type="submit"],
+.welcome button{
   display: inline-block;
   padding: 10px 15px;
   border-radius: 9px;
@@ -97,104 +97,26 @@ form .form-inner input[type="submit"]{
   cursor: pointer;
 }
 
-form .form-inner input[type="submit"]:hover{
+form .form-inner input[type="submit"]:hover,
+.welcome button:hover{
   background-position: 100% 0%;
 }
 
-.landing-page{
-  background-color: #53565A;
-  height: 100vh;
+.welcome{
+  width: 100%;
+  max-width: 480px;
+  background-color: #FFF;
+  padding: 15px 30px;
 }
 
-.verticle-menu{
-  width: 200px;
-  height: 100%;
-  overflow-y: auto;
+.welcome h2{
+  color: #888;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
-.verticle-menu a{
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.verticle-menu a:hover{
-  background-color: #ccc;
-}
-
-.verticle-menu a.active{
-  background-color: #626262;
-  color: white;
-}
-
-.logout-button{
-  position: absolute;
-  left: 50px;
-  bottom: 10px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: #FFF;
+.welcome h2 span{
+  color: #FE4880;
   font-weight: 700;
-  cursor: pointer;
-}
-
-.logout-button:hover{
-  background-position: 100% 0%;
-}
-
-.settings-button{
-  position: absolute;
-  right: 50px;
-  top: 10px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: #FFF;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.analytics-button{
-  position: absolute;
-  right: 125px;
-  top: 10px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: #FFF;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.settings-button:hover, .analytics-button:hover{
-  background-position: 100% 0%;
-}
-
-.other-button{
-  margin: 50px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  background-image: linear-gradient(to right, #FFCE00 50%, #FF4880);
-  background-size: 200%;
-  background-position: 0%;
-  transition: 0.4s;
-  color: #FFF;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.other-button:hover{
-  background-position: 100% 0%;
-}
+}*/
