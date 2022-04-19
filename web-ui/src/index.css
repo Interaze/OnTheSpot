@@ -5,7 +5,7 @@
   font-family: montserrat, sans-serif;
 }
 
-/* input, button{
+input, button{
   appearance: none;
   background: none;
   border: none;
@@ -197,4 +197,4 @@ form .form-inner input[type="submit"]:hover{
 
 .other-button:hover{
   background-position: 100% 0%;
-} */
+}
