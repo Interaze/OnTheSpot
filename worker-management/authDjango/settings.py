@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authApp',
     'django_grpc',
+    'grpcPassthrough',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,7 @@ REST_FRAMEWORK = {
     ]
 }
 
+# GRPC SETTINGS - Remove credentials if it causes a problem
 GRPCSERVER = {
     'servicers': ['dotted.path.to.callback.eg.grpc_hook'],  # see `grpc_hook()` below
     'interceptors': ['dotted.path.to.interceptor_class',],  # optional, interceprots are similar to middleware in Django
