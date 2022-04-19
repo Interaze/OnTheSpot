@@ -17,9 +17,6 @@ export default class App extends Component {
 }
 setCSRF = () => {
   axios.get('api/set-csrf/').then(res => console.log(res))
-  axios.get('/api/test-auth/').then(res => this.setState(
-    {endpoint:      true}))
-    .catch(res => this.setState({endpoint: false})) 
 }
 handleChange = (e) => {
   this.setState({[e.target.name]: e.target.value})
@@ -74,7 +71,7 @@ render() {
             <input type='submit' value='Login' onClick={this.setCSRF}></input>
           </div>
         </form>
-        <div>
+        <div style={{marginTop: '20px'}}>
           {this.state.auth === null ? '' : (this.state.auth ? 'Login successful' : 'Login Failed' )}
         </div>
         <div className='other-button'>
