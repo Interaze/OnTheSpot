@@ -6,81 +6,49 @@ import {Link} from 'react-router-dom';
 
 import axios from './axiosConfig';
 export default class App extends Component {
-  constructor(props){
-  super(props)
-  this.state = {
-    username: '',
-    password: '',
-    auth: null,
-    endpoint: null
-  }
-}
-setCSRF = () => {
-  axios.get('api/set-csrf/').then(res => console.log(res))
-}
-handleChange = (e) => {
-  this.setState({[e.target.name]: e.target.value})
-}
-handleSubmit = (event) => {
-  event.preventDefault();
-  axios.post('/api/login/',
-  {username: this.state.username,
-  password: this.state.password}
-  ).then(res => {
-  this.setState({auth: true})
-  }).catch(res => this.setState({auth: false}))
-}
-testEndpoint = () => {
-  axios.get('/api/test-auth/').then(res => this.setState(
-  {endpoint:      true}))
-  .catch(res => this.setState({endpoint: false})) 
-}
+//   constructor(props){
+//   super(props)
+//   this.state = {
+//     username: '',
+//     password: '',
+//     auth: null,
+//     endpoint: null
+//   }
+// }
+// setCSRF = () => {
+//   axios.get('api/set-csrf/').then(res => console.log(res))
+// }
+// handleChange = (e) => {
+//   this.setState({[e.target.name]: e.target.value})
+// }
+// handleSubmit = (event) => {
+//   event.preventDefault();
+//   axios.post('/api/login/',
+//   {username: this.state.username,
+//   password: this.state.password}
+//   ).then(res => {
+//   this.setState({auth: true})
+//   }).catch(res => this.setState({auth: false}))
+// }
+// testEndpoint = () => {
+//   axios.get('/api/test-auth/').then(res => this.setState(
+//   {endpoint:      true}))
+//   .catch(res => this.setState({endpoint: false})) 
+// }
 render() {
   return( 
-    <div>
-      {this.state.endpoint === true ? (
-        <div className="landing-page">
-          <div className="verticle-menu">
-              <a href="#" className="active">
-                Task 1
-              </a>
-              <a href="#">Task 2</a>
-              <a href="#">Task 3</a>
-              <a href="#">Task 4</a>
-              <a href="#">Task 5</a>
-            </div>
-            {/* <button onClick={Logout} className="logout-button">
-              Logout
-            </button> */}
-            <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
-            <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
-          </div>
-      ):(
-        <div className='App'>
-        <form onSubmit={this.handleSubmit}>
-          <div className='form-inner'>
-            <h2>Login</h2>
-            <div className='form-group'>
-              <label htmlFor='username'>Username</label>
-              <input name='username' id='username' value={this.state.username} onChange={this.handleChange}></input>
-            </div>
-            <div className='form-group'>
-              <label htmlFor='password'>Password</label>
-              <input type='password'name='password' id='password' value={this.state.password} onChange={this.handleChange}></input>
-            </div>
-            <input type='submit' value='Login' onClick={this.setCSRF}></input>
-          </div>
-        </form>
-        <div style={{marginTop: '20px'}}>
-          {this.state.auth === null ? '' : (this.state.auth ? 'Login successful' : 'Login Failed' )}
-        </div>
-        <div className='other-button'>
-          <button onClick={this.testEndpoint}>Continue</button>
-        </div>
-        <div>{this.state.endpoint === null ? '' : (this.state.endpoint ? 'Successful Request' : 'Request Rejected')}</div>
+    <div className="landing-page">
+      <div className="verticle-menu">
+        <a href="#" className="active">
+          Task 1
+        </a>
+        <a href="#">Task 2</a>
+        <a href="#">Task 3</a>
+        <a href="#">Task 4</a>
+        <a href="#">Task 5</a>
       </div>
-      )}
-      
+      <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
+      <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
     </div>
   )
 };
