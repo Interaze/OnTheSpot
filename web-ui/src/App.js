@@ -36,7 +36,7 @@ testEndpoint = () => {
   .catch(res => this.setState({endpoint: false})) 
 }
 render() {
-  return <div className='App' onLoad={this.setCSRF}>
+  return <div className='App'>
       <form onSubmit={this.handleSubmit}>
         <div className='form-inner'>
           <h2>Login</h2>
@@ -48,7 +48,7 @@ render() {
             <label htmlFor='password'>Password</label>
             <input type='password'name='password' id='password' value={this.state.password} onChange={this.handleChange}></input>
           </div>
-          <input type='submit' value='Login'></input>
+          <input type='submit' value='Login' onClick={this.setCSRF}></input>
         </div>
        </form>
       <div>
