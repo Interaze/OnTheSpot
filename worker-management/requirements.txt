@@ -3,3 +3,5 @@ psycopg2-binary>=2.8
 mysqlclient>=2.0
 djangorestframework
 django-grpc
+pywebvue
+vtk

@@ -18,11 +18,13 @@ from django.urls import path, include
 
 from authApp.views import set_csrf_token, login_view
 from auth.views import CheckAuth
+from authApp.vtkStream import Cone_Zone
 
 urlpatterns = [
     path('set-csrf/', set_csrf_token, name='Set-CSRF'),
     path('login/', login_view, name='Login'),
-    path('test-auth/', CheckAuth.as_view(), name='Test-Auth')
+    path('test-auth/', CheckAuth.as_view(), name='Test-Auth'),
+    path('cone/', Cone_Zone, name='Cone')
 
 #    path('example-view/', views.ExampleView.get, name='Example-View')
 ]
