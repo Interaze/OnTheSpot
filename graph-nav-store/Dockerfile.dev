@@ -9,6 +9,7 @@ RUN apt-get install \
   python3-opencv \
   libgl1-mesa-glx -y
 COPY requirements.txt /code/
+RUN apt-get upgrade qemu -y
 
 ENV VIRTUAL_ENV=py-env
 RUN python3 -m venv $VIRTUAL_ENV

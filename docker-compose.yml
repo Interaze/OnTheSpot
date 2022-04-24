@@ -47,6 +47,11 @@ services:
     networks:
       - worker-management-network
     command: python /code/py-web-vue-master/examples/VTK/SimpleCone/RemoteViewLocalRendering/app.py --port 1234 --host 0.0.0.0 --debug
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 8192M
 
 volumes:
   service-balance:

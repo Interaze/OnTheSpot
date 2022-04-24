@@ -1,3 +1,4 @@
 pywebvue
-
+bosdyn-client
+bosdyn-mission
 vtk>=9.1
