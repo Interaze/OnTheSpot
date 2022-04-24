@@ -1,0 +1,18 @@
+FROM python:3.8
+ENV PYTHONUNBUFFERED=1
+WORKDIR /code
+RUN apt-get update
+RUN apt-get install \
+  ffmpeg \
+  libsm6 \
+  libxext6 \
+  python3-opencv \
+  libgl1-mesa-glx -y
+COPY requirements.txt /code/
+
+ENV VIRTUAL_ENV=py-env
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN pip install -r requirements.txt
+COPY . /code/

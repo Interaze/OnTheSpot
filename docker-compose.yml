@@ -37,6 +37,17 @@ services:
       - management-store-network
     command: python manage.py runserver 0.0.0.0:8000
 
+  graph-nav-store:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./graph-nav-store
+    platform: 'linux/x86_64'
+    ports:
+      - '4051:1234'
+    networks:
+      - worker-management-network
+    command: python /code/py-web-vue-master/examples/VTK/SimpleCone/RemoteViewLocalRendering/app.py --port 1234 --host 0.0.0.0 --debug
+
 volumes:
   service-balance:
     driver: local
