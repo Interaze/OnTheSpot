@@ -7,6 +7,8 @@ from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.response import Response
 
+from authApp.loadData import loadMap, loadMission
+
 @ensure_csrf_cookie
 def set_csrf_token(request):
     """
@@ -37,3 +39,13 @@ def login_view(request):
         {"detail": "Invalid credentials"},
         status=400,
     )
+
+def load_map(request):
+    mapPath = request.GET['mapPath']
+
+    return JsonResponse(loadMap(mapPath))
+
+def load_mission(request):
+    missionPath = request.GET['missionPath']
+
+    return JsonResponse(loadMission(missionPath))
