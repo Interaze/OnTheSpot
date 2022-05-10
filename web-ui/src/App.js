@@ -4,7 +4,6 @@ import {IoMdSettings} from '../node_modules/react-icons/io';
 import {SiSimpleanalytics} from '../node_modules/react-icons/si';
 import {Link} from 'react-router-dom';
 
-// import axios from './axiosConfig';
 export default class App extends Component {
 //   constructor(props){
 //   super(props)
@@ -35,22 +34,25 @@ export default class App extends Component {
 //   {endpoint:      true}))
 //   .catch(res => this.setState({endpoint: false})) 
 // }
+
 render() {
-  return( 
-    <div className="landing-page">
-      <div className="verticle-menu">
-        <a href="/#" className="active">
-          Task 1
-        </a>
-        <a href="/#">Task 2</a>
-        <a href="/#">Task 3</a>
-        <a href="/#">Task 4</a>
-        <a href="/#">Task 5</a>
+      return(
+      <div className="landing-page">
+        <div className="verticle-menu">
+          <a href="/#" className="active">Task 1</a>
+          <a href="/#"><script>graphData['waypoints'][0]['annotations']['name']</script></a>
+          <a href="/#">Task 3</a>
+          <a href="/#">Task 4</a>
+          <a href="/#">Task 5</a>
+          <a href="/#">Task 2</a>
+          <a href="/#">Task 3</a>
+          <a href="/#">Task 4</a>
+          <a href="/#">Task 5</a>
+        </div>
+        <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
+        <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
       </div>
-      <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
-      <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
-    </div>
-  )
+    )
 };
 }
 

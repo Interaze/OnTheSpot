@@ -13,7 +13,8 @@
     "@kitware/vtk.js": "^24.5.2",
     "axios": "*",
     "react-icons": "*",
-    "react-router-dom": "^6.0.0"
+    "react-router-dom": "^6.0.0",
+    "jquery": "*"
   },
   "scripts": {
     "start": "react-scripts start",

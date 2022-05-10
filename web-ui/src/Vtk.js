@@ -7,6 +7,7 @@ import vtkFullScreenRenderWindow from '@kitware/vtk.js/Rendering/Misc/FullScreen
 import vtkActor           from '@kitware/vtk.js/Rendering/Core/Actor';
 import vtkMapper          from '@kitware/vtk.js/Rendering/Core/Mapper';
 import vtkConeSource      from '@kitware/vtk.js/Filters/Sources/ConeSource';
+import $          from 'jquery';
 
 function Vtk() {
   const vtkContainerRef = useRef(null);

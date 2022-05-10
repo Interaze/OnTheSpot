@@ -25,6 +25,5 @@ urlpatterns = [
     path('test-auth/', CheckAuth.as_view(), name='Test-Auth'),
     path('load-map/', load_map, name='Load-Map'),
     path('load-mission/', load_mission, name='Load-Mission'),
-
 #    path('example-view/', views.ExampleView.get, name='Example-View')
 ]
