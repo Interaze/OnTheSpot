@@ -1,6 +1,8 @@
 import React from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import {Link} from 'react-router-dom';
+import $ from 'jquery';
+
 
 function Analytics() {
   return (
