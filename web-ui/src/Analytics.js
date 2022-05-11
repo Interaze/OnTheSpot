@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
@@ -22,9 +22,11 @@ function Analytics( {currentMission} ) {
 
   return (
     <div className="landing-page">
+      <iframe src="./Vtk" className="vtk-window"></iframe>
       <div className="verticle-menu">
         {itemList.map(item => ( <a key={item['annotations']['name']} href="/#">{item['annotations']['name']}</a> ))}
       </div>
+
       <Link to="/" className="settings-button"><BiArrowBack color='white' fontSize='1.5rem'/></Link>
       <span></span>
     </div>

@@ -80,7 +80,7 @@ function Vtk() {
         style={{
           position: 'absolute',
           top: '25px',
-          left: '25px',
+          left: '250px',
           background: 'white',
           padding: '12px',
         }}
