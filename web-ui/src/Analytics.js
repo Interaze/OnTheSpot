@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
+import Vtk from './Vtk';
 
 function Analytics( {currentMission} ) {
 
@@ -21,7 +22,7 @@ function Analytics( {currentMission} ) {
     }, [currentMission, setItemList]);
 
   return (
-    <div className="landing-page">
+    <div className="analytics-page">
       <div className="verticle-menu">
         {itemList.map(item => ( <a key={item['annotations']['name']} href="/#">{item['annotations']['name']}</a> ))}
       </div>
