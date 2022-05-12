@@ -1,1 +1,6 @@
 management-store-data/*
+worker-management/authApp/__pycache__/*
+graph-nav-store/authApp/__pycache__/*
+worker-management/authDjango/__pycache__/*
+graph-nav-store/authDjango/__pycache__/*
+worker-management/auth/__pycache__/*
