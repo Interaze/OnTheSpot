@@ -18,6 +18,19 @@ services:
     networks:
       - management-store-network
 
+  graph-nav-store:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./graph-nav-store
+    platform: 'linux/x86_64'
+    volumes:
+      - ./graph-nav-store:/code
+    networks:
+      - graph-nav-store-network
+    command: python manage.py runserver 0.0.0.0:8000
+
 networks:
   management-store-network:
+    driver: "bridge"
+  graph-nav-store-network:
     driver: "bridge"

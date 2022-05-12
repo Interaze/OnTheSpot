@@ -35,6 +35,7 @@ services:
     networks:
       - worker-management-network
       - management-store-network
+      - graph-nav-store-network
     command: python manage.py runserver 0.0.0.0:8000
 
 volumes:
@@ -53,3 +54,6 @@ networks:
   management-store-network:
     external: true
     name: onthespot_management-store-network
+  graph-nav-store-network:
+    external: true
+    name: onthespot_graph-nav-store-network
