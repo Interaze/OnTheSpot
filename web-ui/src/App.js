@@ -7,7 +7,6 @@ import axios from 'axios'
 // import Data from './text.json';
 
 
-// import axios from './axiosConfig';
 export default class App extends Component {
 //   constructor(props){
 //   super(props)
