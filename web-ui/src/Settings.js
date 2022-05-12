@@ -7,7 +7,6 @@ function Settings() {
   return (
     <div className="landing-page">
       <Link to="/" className="settings-button"><BiArrowBack color='white' fontSize='1.5rem'/></Link>
-      <h2 className='page-title'>Settings</h2>
       <div className='settings-div'>
         <form className='setting-form'>
           <div className='form-inner'>

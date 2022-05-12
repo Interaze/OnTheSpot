@@ -67,6 +67,7 @@ render() {
       {/* <iframe title='vtk' src="https://kitware.github.io/vtk-js/examples/SimpleCone.html"></iframe> */}
       <Link to="/settings" className="settings-button"><IoMdSettings color='white' fontSize='1.5rem'/></Link>
       <Link to="/analytics" className="analytics-button"><SiSimpleanalytics color='white' fontSize='1.5rem'/></Link>
+      <a href="login" className="logout-button">Logout</a>
     </div>
   )
 };
